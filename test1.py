@@ -79,6 +79,6 @@ def draw_helmet(image_id ):
                                         ec ='r',
                                         lw = 10) )
         plt.show()
-#%% Training the model
+#%% Training the first model 
 
  
