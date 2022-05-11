@@ -80,5 +80,39 @@ def draw_helmet(image_id ):
                                         lw = 10) )
         plt.show()
 #%% Training the first model 
+df = boxes[['XMin','XMax','YMin','YMax']]
+df['XMoy'] = df[['XMin','XMax']].mean(axis=1)
+df['YMoy'] = df[['YMin','YMax']].mean(axis=1)
 
- 
+
+
+with plt.style.context("dark_background"):
+    plt.figure(figsize=(12, 8))
+    
+    plt.scatter(
+        x=df["XMoy"],
+        y=df["YMoy"],
+        c="green",
+        alpha=.1
+    )
+plt.axis()
+plt.savefig(r'D:/Users/antho/Desktop/Data Scientest Github/')
+plt.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
